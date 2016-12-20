@@ -1,0 +1,376 @@
+/*================================*\
+      Scroll-Horizontal-Values
+\*================================*/
+
+.scrollTo-demo .content {
+    height: 290px;
+}
+
+.scrollTo-demo .demo-y {
+    height: 600px;
+}
+
+.scrollTo-demo .demo-x {
+    width: 900px;
+    background-color: white;
+    padding-left: 50px;
+}
+
+@media only screen and (max-width: 500px) {
+    .scrollTo-demo .demo-x {
+        padding-left: 0px;
+    }
+}
+
+.scrollTo-demo .demo-x p {
+    float: left;
+    width: 300px;
+    margin-left: 30px;
+    height: auto;
+    padding: 5px 10px;
+    background-color: white;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.scrollTo-demo .demo-x hr+p {
+    margin-left: 0;
+}
+
+.scrollTo-demo .demo-yx {
+    background-color: #424242;
+}
+
+.scrollTo-demo .demo-yx p {
+    width: 1000px;
+}
+
+@media only screen and (min-width: 1229px) {
+    .showcase .horizontal-images.content {
+        width: 1060px;
+    }
+}
+
+@media only screen and (min-width: 1629px) {
+    .showcase .horizontal-images.content {
+        width: 700px;
+    }
+}
+
+
+/*
+------------------------------------------------------------------------------------------------------------------------
+1. BASIC STYLE
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+.mCustomScrollbar {
+    -ms-touch-action: pinch-zoom;
+    touch-action: pinch-zoom;
+    padding-right: 40px;
+    /* direct pointer events to js */
+}
+
+.mCustomScrollbar.mCS_no_scrollbar, .mCustomScrollbar.mCS_touch_action {
+    -ms-touch-action: auto;
+    touch-action: auto;
+}
+
+.mCustomScrollBox {
+    /* contains plugin's markup */
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    max-width: 100%;
+    outline: none;
+    direction: ltr;
+}
+
+.mCSB_container {
+    /* contains the original content */
+    overflow: hidden;
+    width: auto;
+    height: auto;
+}
+
+
+/*
+------------------------------------------------------------------------------------------------------------------------
+3. HORIZONTAL SCROLLBAR
+x-axis
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+.mCSB_horizontal.mCSB_inside>.mCSB_container {
+    margin-right: 0;
+    margin-bottom: 30px;
+}
+
+.mCSB_horizontal.mCSB_outside>.mCSB_container {
+    min-height: 100%;
+}
+
+.mCSB_horizontal>.mCSB_container.mCS_no_scrollbar_x.mCS_x_hidden {
+    margin-bottom: 0;
+}
+
+
+/* non-visible scrollbar */
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal {
+    width: auto;
+    height: 20px;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 10px;
+    /*background-color: #f2f2f2;*/
+    border-radius: 4px;
+}
+
+.mCustomScrollBox+.mCSB_scrollTools.mCSB_scrollTools_horizontal, .mCustomScrollBox+.mCSB_scrollTools+.mCSB_scrollTools.mCSB_scrollTools_horizontal {
+    bottom: -26px;
+}
+
+
+/* scrollbar position: outside */
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal a+.mCSB_draggerContainer {
+    margin: 0 20px;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+    width: 100%;
+    height: 2px;
+    margin: 7px 0;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger {
+    width: 30px;
+    /* minimum dragger width */
+    height: 100%;
+    left: 0;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+    width: 100%;
+    height: 6px;
+    margin: 6px auto;
+}
+
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+    height: 12px;
+    /* auto-expanded scrollbar */
+    margin: 2px auto;
+}
+
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail, .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+    height: 8px;
+    /* auto-expanded scrollbar */
+    margin: 4px 0;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft, .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft {
+    left: 0;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight {
+    right: 0;
+}
+
+
+/*
+------------------------------------------------------------------------------------------------------------------------
+6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+/*
+	----------------------------------------
+	6.1 THEMES
+	----------------------------------------
+	*/
+
+
+/*.mCSB_scrollTools .mCSB_draggerRail{
+		background-color: #000; background-color: orange;
+		filter: "alpha(opacity=40)"; -ms-filter: "alpha(opacity=40)";
+	}*/
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #fff;
+    background-color: #ff0000;
+    filter: "alpha(opacity=75)";
+    -ms-filter: "alpha(opacity=75)";
+}
+
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background-color: #fff;
+    background-color: #ff0000;
+    filter: "alpha(opacity=85)";
+    -ms-filter: "alpha(opacity=85)";
+}
+
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: #fff;
+    background-color: #ff0000;
+    filter: "alpha(opacity=90)";
+    -ms-filter: "alpha(opacity=90)";
+}
+
+
+/*=======================*\
+		Work By me
+\*=======================*/
+
+.title-slide-horizontal {
+    padding-left: 110px;
+    color: #c3986c;
+    font-family: 'Gotham Black';
+    font-weight: bolder;
+}
+
+@media only screen and (max-width: 500px) {
+    .title-slide-horizontal {
+        padding: 10px;
+    }
+    .title-slide-horizontal hr {
+        display: none;
+    }
+    .scroll-section {
+        padding: 0px 0px 40px 0px !important;
+    }
+    .table-title hr {
+        display: none;
+    }
+}
+
+.scroll-section {
+    padding: 0px 0px 0px 30px;
+}
+
+.panel1-horizontal-slider img {
+    width: 350px;
+}
+
+.slider-panel-top {
+    text-decoration: none !important;
+    font-size: 10px !important;
+    color: #cccccc !important;
+    font-family: 'Gotham Black' !important;
+    cursor: default;
+}
+
+.slider-panel-body {
+    text-decoration: none !important;
+    font-size: 20px !important;
+    color: #272f34;
+    font-family: 'Gotham Black';
+    font-weight: bolder;
+    cursor: default;
+}
+
+.slider-panel-body:hover {
+    color: #272f34;
+}
+
+.slider-panel-body2 {
+    text-decoration: none;
+    color: #272f34;
+    cursor: default;
+}
+
+.slider-panel-body2:hover {
+    text-decoration: none;
+    color: #272f34;
+}
+
+.slider-panel-button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    font-family: 'Montserrat';
+    font-size: 12px;
+}
+
+
+/*============================*\
+			TABLE
+\*============================*/
+
+.currency-section {
+    margin-top: -96px;
+    width: 30%;
+    background-color: #272f34;
+}
+
+@media only screen and (max-width: 1385px) {
+    .currency-section {
+        margin-top: 0px;
+        width: 100%;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+}
+
+.table-title {
+    color: #c3986c;
+    font-family: 'Gotham Black';
+}
+
+.table-currency {
+    width: 100%;
+    background-color: #272f34;
+    color: #b3b3b3;
+    text-align: center;
+    font-size: 10px;
+}
+
+.table-currency th {
+    background-color: #363f44;
+    padding: 15px 30px;
+    text-align: center;
+}
+
+.table-currency td {
+    border-top: solid 1px #363f44;
+    padding: 12px 30px;
+    text-align: center;
+}
+
+/*
+.scroll {
+   overflow: scroll;
+}*/
+.scroll::-webkit-scrollbar {
+    width: 5px;
+    height: 0% !important;
+    /*background-color: red;*/
+}
+
+.scroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    /*background-color: purple;*/
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    background-color: #ff0000;
+}
+​

@@ -1,0 +1,173 @@
+/*====================================*/
+
+/*        -EMIRATES GRAPHIC-          */
+
+/*        emiratesgraphic.com         */
+
+/*====================================*/
+
+
+
+/*====================*/
+/*       FONTS        */
+/*====================*/
+
+
+@font-face {
+  font-family: 'Gotham Light Regular';
+  src: url('../fonts/Gotham Light Regular.otf');
+ }
+ @font-face {
+  font-family: 'GOTHAM-BLACK';
+  src: url('../fonts/GOTHAM-BLACK.TTF');
+ }
+@font-face {
+  font-family: 'GOTHAM-LIGHT';
+  src: url('../fonts/GOTHAM-LIGHT.TTF');
+ }
+@font-face {
+  font-family: 'Lucia BT';
+  src: url('../fonts/Lucia BT.ttf');
+ }
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+    .navbar-default {
+    background-color: red;
+    border: none;
+    }
+}
+
+.top-nav-collapse {
+    background-color: rgba(0, 0, 0, 0.86) !important;
+    padding: 15px 0px !important;
+}
+
+.top-nav-collapse .navigation_brand {
+    display: none;
+}
+.top-nav-collapse .navigationbar_col {
+    display: block !important;
+    transition: ease-in-out all 0.3s;
+    font-size: 30px;
+}
+
+
+
+.navbar-default {
+    background-color: transparent;
+    border: none;
+    padding: 30px 0px;
+}
+.navbar-default .navigationbar_col {
+    display: none;
+    transition: ease-in-out all 0.3s;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #c3986c;
+    font-family: 'GOTHAM-BLACK';
+    border-bottom: solid 2px transparent;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    color: #a07d59;
+    font-family: 'GOTHAM-BLACK';
+    border-bottom: solid 2px #a07d59;
+}
+.navbar-default .navbar-nav>li>a:active {
+    color: #a07d59;
+    font-family: 'GOTHAM-BLACK';
+    border-bottom: solid 2px #a07d59;
+}
+.navbar-default .navbar-nav>li>a:focus {
+    color: #a07d59;
+    font-family: 'GOTHAM-BLACK';
+    border-bottom: solid 2px #a07d59;
+}
+
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #a07d59;
+    background-color: transparent !important;
+}
+
+
+
+
+.navigation_brand {
+    color: #a07d59 !important;
+    font-family: 'Lucia BT';
+    font-size: 50px;
+    line-height: 40px;
+}
+
+
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+    border: transparent !important;
+}
+.navbar-default .navbar-toggle {
+     background-color: transparent;
+    border: transparent !important;
+}
+/*
+///////////////////////////////////////////////////
+Responsive Part 
+///////////////////////////////////////////////////
+*/
+
+@media only screen and (min-width: 844px) {
+    .desktop-d-n {
+        display: none;
+    }
+}
+
+/*Mobile Version*/
+
+@media only screen and (max-width: 844px) {
+    .mobile-d-n {
+        display: none !important;
+    }
+    .navbar-default {
+        background-color:  rgba(0, 0, 0, 0.86);
+        border: none;
+        padding: 5px 0px !important;
+    }
+    .top-nav-collapse .navigationbar_col {
+        display: none !important;
+        padding: 5px 0px !important;
+    }
+}
